@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html id="feedback" class="en">
+<head>
+<title>Quality Cat- Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+.material-icons.orange600 { color: #FF7F00; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-48 { font-size: 36px; }
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	<header id="header">
+	<h1><a href="dashboard.html">Quality Cat</a></h1>
+	<div>
+		<a class="choose-lang" href="#" id="lan"><i class="fa fa-gear"></i> English</a>
+	</div>
+</header>
+	<nav id="nav">
+	<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+		<i class="fa fa-bars"></i>
+	</button>
+	<ul id="nav-collapse" class="navbar-collapse collapse">
+		<li id="nav-dashboard"><a href="dashboard.html"><span>Dashboard</span></a></li>
+		<li id="nav-test_plan" ><a href=""><span>Test Plan</span></a></li>
+		<li id="nav-test_suite" ><a href=""><span>Test Suite</span></a></li>
+		<li id="nav-test_case" ><a href=""><span>Test Case</span></a></li>
+		<li id="nav-my_task" ><a href=""><span>My Task</span></a></li>
+		<li id="nav-admin" ><a href=""><span>Admin</span></a></li>
+	</ul>
+</nav>
+	<div id="content">
+		<div id="dashboard">
+			<section id="test_process" >
+				<h1>Select project</h1>
+				<div class="alert alert-danger" role="alert">
+  					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  					<span class="sr-only">Error:</span>
+  					Please select project				</div>
+				<select name="country" class="form-control">
+					<option value="">Please select</option>
+					<option value="A"  >A</option>
+					<option value="B"  >B</option>
+				</select>
+			</section>
+
+
+			<section id="imcomplete-task">
+				<h1>Incomplete Task(s)</h1>
+
+				<div class="task-st-wrapper">
+<!-- 					<div class="feedback-st-wrapper">
+						
+						<div id="feedback-details" class="col-sm-8">
+							
+						</div>
+					</div> -->
+				</div>
+			</section>
+
+	</div>
+</div>
+
+<div id="lang-chooser" class="chooser modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2>Please choose your language:</h2>
+				<p>
+					<a data-lang="en" href="#">English</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>
