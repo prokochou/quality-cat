@@ -1,0 +1,51 @@
+
+/*---nav bar ---*/
+.bg-light {
+    background-color: rgba(29, 23, 23, 0.9)!important;
+}
+
+
+#logo{
+	left: 1em;
+    position: fixed;
+    top: 10px;
+    z-index: 1; 
+/*	background: url(../images/cat-logo.svg) no-repeat;*/
+}
+
+.navbar-dark .navbar-brand {
+    color: #FF7F00;
+    margin-left: 50px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: #f8f9fa;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #dae0e575;
+}
+
+.login{
+	color: #FF7F00;
+	font-size: x-small;
+	margin-left:26px;
+}
+
+.choose-lang{
+	color: #FF7F00;
+	font-size: x-small;
+}
+
+.line{
+	color:#fff;
+}
+
+/**--- Font ---*/
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+
