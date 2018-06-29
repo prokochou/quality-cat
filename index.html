@@ -55,7 +55,7 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
  		<li>
-			<span class="login">Logged in</span>
+			<span class="login" data-toggle="modal" data-target="#exampleModal">Logged in</span>
 			<span class="line">&nbsp;|&nbsp;</span>
  		</li>
  		
@@ -67,6 +67,34 @@
   </div><!-- collapse navbar-collapse -->
 
 </nav>
+
+<!-- Login -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<table>
+      		<tr>
+      			<td><label for="email">Email:</label></td>
+      			<td><input type="email" class="inputtext" name="email" id="email" tabindex="1"></td>
+      		</tr>
+      		<tr>
+      			<td><label for="pass">Password: </label></td>
+      			<td><input type="password" class="inputtext" name="pass" id="pass" tabindex="2"></td>
+      		</tr>
+      	</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <script src="asset/js/jquery-3.3.1.min.js"></script>
