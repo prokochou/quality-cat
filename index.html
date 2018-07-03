@@ -66,20 +66,17 @@
 
 <!-- Log in -->
 <div id="container">
-
-      	<table>
-      		<tr>
-      			<td><label for="email">Email:</label></td>
-      			<td><input type="email" class="inputtext" name="email" id="email" tabindex="1"></td>
-      		</tr>
-      		<tr>
-      			<td><label for="pass">Password: </label></td>
-      			<td><input type="password" class="inputtext" name="pass" id="pass" tabindex="2"></td>
-      		</tr>
-      		<td colspan="2">
-				<input class="btn btn-primary" type="submit" value="Submit">
-      		</td>
-      	</table>
+		<form>
+	      	<table>
+	      		<tr>
+	      			<td><label for="email">Account:</label></td>
+	      			<td><input type="text" class="inputtext" name="account" id="account" title="4 to 10 characters" pattern=".{4,10}"required></td>
+	      		</tr>
+	      		<td colspan="2">
+					<input class="btn btn-primary" type="submit" value="Next">
+	      		</td>
+	      	</table>
+      	</form>
       	
 </div>
 
