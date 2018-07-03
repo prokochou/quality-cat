@@ -62,6 +62,12 @@ label {
     display: inline;
 }
 
+.btn-primary:hover {
+    color: #fff;
+    background-color: #FF7F00;
+    border-color: #FF7F00;
+}
+
 /**--- Font ---*/
 body{
 	font-family: 'Roboto', sans-serif;
@@ -84,6 +90,54 @@ body{
 	width:70%;
 	border: 1px solid #FF7F00;
 }
+
+/**--- Dashboard ---*/
+
+#container_dashboard {
+    width: 500px;
+    padding: 40px;
+}
+
+#container_dashboard label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.chart {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -1px 0;
+    /* border: solid #f7f7f9; */
+    border-width: .2rem 0 0;
+    height: 1000px;
+    background: #f8f9fa;
+    width: 1000px;
+}
+
+@media (min-width: 576px)
+.chart {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+
+.progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin: 10px;
+}
+
+#container_dashboard table{
+    width: 800px;
+}
+
 
 
 
