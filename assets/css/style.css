@@ -6,16 +6,12 @@
 
 
 #logo{
-	left: 1em;
-    position: fixed;
-    top: 10px;
-    z-index: 1; 
-/*	background: url(../images/cat-logo.svg) no-repeat;*/
+    float: left;
 }
 
 .navbar-dark .navbar-brand {
     color: #FF7F00;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link {
