@@ -6,14 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-
 	<link rel="stylesheet" href="asset/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
-
-
+	
 </head>
 
 <body>
@@ -54,10 +50,10 @@
     </ul>
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
- 		<li>
+<!--  		<li>
 			<span class="login" data-toggle="modal" data-target="#exampleModal">Logged in</span>
 			<span class="line">&nbsp;|&nbsp;</span>
- 		</li>
+ 		</li> -->
  		
  		<li>
  			<span class="choose-lang"><i class="fa fa-gear"></i> English</span>	
@@ -68,16 +64,9 @@
 
 </nav>
 
-<!-- Login -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+<!-- Log in -->
+<div id="container">
+
       	<table>
       		<tr>
       			<td><label for="email">Email:</label></td>
@@ -87,15 +76,12 @@
       			<td><label for="pass">Password: </label></td>
       			<td><input type="password" class="inputtext" name="pass" id="pass" tabindex="2"></td>
       		</tr>
+      		<td colspan="2">
+				<input class="btn btn-primary" type="submit" value="Submit">
+      		</td>
       	</table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
+      	
 </div>
-
 
 <script src="asset/js/jquery-3.3.1.min.js"></script>
 <script src="asset/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>

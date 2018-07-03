@@ -41,6 +41,31 @@
 	color:#fff;
 }
 
+/**--- Login ---*/
+#container {
+	width: 360px;
+	margin: 100px auto;
+	padding-left: 5px;
+}
+
+#container table td {
+	padding:5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0rem;
+}
+
+.btn-primary {
+	margin-top: 20px;
+    margin-left: 100px;
+    color: #212529;
+    background-color: #fff;
+    border-color: #FF7F00;
+    display: inline;
+}
+
 /**--- Font ---*/
 body{
 	font-family: 'Roboto', sans-serif;
