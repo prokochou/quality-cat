@@ -28,6 +28,16 @@
 	margin-left:26px;
 }
 
+.contributor{
+    color: #FF7F00;
+    font-size: x-small;
+}
+
+.logout{
+    color: #FF7F00;
+    font-size: x-small;
+}
+
 .choose-lang{
 	color: #FF7F00;
 	font-size: x-small;
@@ -68,14 +78,19 @@ label {
     border-color: #FF7F00;
 }
 
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem #FF7F00;
+}
+
 /**--- Font ---*/
 body{
 	font-family: 'Roboto', sans-serif;
 }
 
-/**--- LogIn ---*/
+/**--- Contributor ---*/
 .modal-header {
     border-bottom: 0px; 
+    height: 1px;
 }
 
 .modal-footer{
@@ -83,7 +98,11 @@ body{
 }
 
 .modal-body {
-    margin: auto;
+    margin: 5px auto;
+    padding: 0rem; 
+}
+.modal-body ul{
+    font-size: 16px;
 }
 
 .modal-content {
@@ -112,6 +131,12 @@ body{
     height: 1000px;
     background: #f8f9fa;
     width: 1000px;
+    overflow: auto;
+    height:400px;
+}
+
+.no-content h4{
+    color:#ff7f00;
 }
 
 @media (min-width: 576px)
