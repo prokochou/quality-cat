@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html id="quality-cat" class="en">
+<head>
+	<title>Quality Cat- Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+	<link rel="stylesheet" href="assets/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <div id="logo"><img src="assets/images/cat-logo-white.svg"></div>
+  <a class="navbar-brand" a href="index.html">Quality Cat</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Test Plan</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Test Suite</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Test Case</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">My Task</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Admin</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+<!--  		<li>
+			<span class="login" data-toggle="modal" data-target="#exampleModal">Logged in</span>
+			<span class="line">&nbsp;|&nbsp;</span>
+ 		</li> -->
+ 		<li>
+ 			<span class="contributor" data-toggle="modal" data-target="#contributor">Contributor</span>
+			<span class="line">&nbsp;|&nbsp;</span>
+ 		</li>
+ 		<li>
+ 			<span class="choose-lang"><i class="fa fa-gear"></i> English</span>	
+ 		</li>
+
+    </ul>	
+  </div><!-- collapse navbar-collapse -->
+
+</nav>
+
+
+<div id="container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="project-tab" data-toggle="tab" href="#project" role="tab" aria-controls="home" aria-selected="true">Project</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="false">User</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
+      <table class="table table-light">
+        <tbody>
+          <tr>
+            <td>
+              <span>A project </span> 
+              <span><i class="fas fa-edit"></span>
+            </td>
+            <td>
+              <span>B project </span>
+              <span><i class="fas fa-edit"></span>
+            </td>
+  
+          </tr>
+
+          <tr>
+            <td>Larry</td>
+          </tr>
+        </tbody>
+    </table>
+      
+
+
+    </div><!-- project-tab end -->
+    <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">user
+
+    </div><!-- user-tab end -->
+  </div>
+      	
+</div>
+
+<!-- Modal Contributor -->
+<div class="modal fade" id="contributor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<ul>
+      		<li>Proko Chou  <a target="_blank" href="https://www.linkedin.com/in/proko-chou"><i class="fab fa-linkedin"></i></a></li>
+      		<li>Yin Ja  <a target="_blank" href="https://www.linkedin.com/in/yin-ja-079008146/"><i class="fab fa-linkedin"></i></a></li>
+      		<li>Barry Cheng  <i class="fab fa-linkedin"></i></li>
+      	</ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
+
