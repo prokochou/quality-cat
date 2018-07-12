@@ -180,7 +180,7 @@ body{
 
 #admin-container {
     /* width: 100%; */
-    margin: 100px;
+    margin: 50px;
     padding-left: 300px;
     padding-right: 10px;
 }
@@ -276,6 +276,10 @@ body{
 
 #user .col-6{
     padding: 10px;
+}
+
+#admin-container .page-navigation{
+    margin-top: 30px;
 }
 
 #user-edit .user-edit{
