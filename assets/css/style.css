@@ -111,7 +111,7 @@ body{
 }
 
 .modal-content {
-	width:70%;
+	width:100%;
 	border: 1px solid #FF7F00;
 }
 
@@ -255,6 +255,10 @@ body{
     width: 100%;
 }
 
+#project-edit .modal-content{
+    height: 150px;
+    width: 100%;
+}
 
 
 
