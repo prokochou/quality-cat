@@ -260,6 +260,40 @@ body{
     width: 100%;
 }
 
+#user .row{
+    border: 1px solid;
+    border-color: #7d7a7a4a;
+    border-radius: 4px;
+}
+
+#user .user{
+    padding:3px;
+}
+
+#user .col{
+    padding: 10px;
+}
+
+#user .col-6{
+    padding: 10px;
+}
+
+#user-edit .user-edit{
+    padding:10px;
+}
+
+#user-edit .modal-content .modal-body .btn-primary {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    color: #9a9696;
+    background-color: #fff;
+    border-color: #FF7F00;
+    display: inline;
+}
+
+
+
 
 
 

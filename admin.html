@@ -130,7 +130,29 @@
     </div><!-- project-tab end -->
 
 
-    <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">user
+    <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <span class="user">
+            Marry
+            </span>
+          </div>
+          <div class="col-6">
+            <span class="user">
+            marry@gmail.com
+            </span>
+          </div>
+          <div class="col">
+            Leader
+          </div>
+          <div class="col">
+            <span class="user-edit" data-toggle="modal" data-target="#user-edit"><i class="far fa-edit"></i></span>
+          </div>
+          </div>
+        </div><!-- row -->
+      </div><!-- col end -->
+
 
     </div><!-- user-tab end -->
   </div>
@@ -194,6 +216,50 @@
           <input id="project-edit" type="text" pattern=".{1,30}" title="1 to 20 characters" required>
           <br>
           <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit User Modal -->
+<div class="modal fade" id="user-edit" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="user-edit">
+            <label>User ID: </label>
+            <label>12345</label>
+          </div>
+
+          <div class="user-edit">
+            <label for="user-edit">User Name</label><span class="required">*</span>
+            <input id="user-name" type="text" pattern=".{4,10}" title="4 to 10 characters" value="marry" required>
+          </div>
+          
+          <div class="user-edit">
+            <label for="user-edit">Mail</label><span class="required">*</span>
+            <input id="user-mail" type="mail" value="marry@gmail.com" required>
+          </div>  
+
+          <div class="form-group user-edit">
+            <label for="FormControlSelect1">Role</label><span class="required">*</span>
+            <select class="form-control" id="FormControlSelect1">
+              <option value="tester">Tester</option>
+              <option value='leader'>Leader</option>
+              <option value='manager'>Manager</option>
+            </select>
+          </div><!-- Dropdown Menu-->
+          
+          <div>
+          <input class="btn btn-primary" type="submit" value="Submit">
+          </div>
         </form>
       </div>
     </div>
