@@ -296,9 +296,42 @@ body{
     display: inline;
 }
 
+#myTabContent .container .user-add {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    border: solid 1px;
+    border-color: #ddd;
+    border-radius: 4px;
+    padding: 5px 0px 5px 8px;
+    text-align: center;
+    margin: 20px;
+}
+
+#admin-container .page-navigation-user{
+    margin: 20px;
+}
+
+#user .bottom{
+    border: 0px solid;
+}
 
 
+.modal-content .modal-body .user-add-modal label{
+    color:#9a9696;
+    padding:10px 0px 10px 0px;
+    float:left;
+}
 
+.modal-content .modal-body .user-add-modal input {
+     border: solid 1px; 
+     margin: 10px; 
+     border-radius: 4px; 
+     border-color: #88828285; 
+}
 
 
 

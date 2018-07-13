@@ -164,20 +164,33 @@
           </div>
         </div><!-- row -->
 
-          <!-- page navigation -->
-          <nav class="page-navigation" aria-label="Page navigation">
-            <ul class="pagination justify-content-end">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
+      <div class="container">
+        <div class="row bottom">
+          <div class="col-sm-6">
+            <div class="user-add">
+              <span class="user-add-icon" data-toggle="modal" data-target="#user-add"><i class="fas fa-plus 5x"></i></i></span>
+            </div>
+          </div>
+
+            <div class="col-sm-6">
+              <!-- page navigation -->
+              <nav class="page-navigation-user" aria-label="Page navigation">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>  
+          </div> <!-- row end -->
+        </div> <!-- container -->    
+
       </div><!-- container end -->
     </div><!-- user-tab end -->
   </div>
@@ -291,6 +304,45 @@
   </div>
 </div>
 
+
+<!-- Add user Modal -->
+<div class="modal fade" id="user-add" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="user-add-modal">
+            <label for="user-add">User Name</label><span class="required">*</span>
+            <input id="user-name" type="text" pattern=".{4,10}" title="4 to 10 characters" value="" required>
+          </div>
+          
+          <div class="user-add-modal">
+            <label>Mail</label><span class="required">*</span>
+            <input id="user-mail" type="mail" value="" required>
+          </div>  
+
+          <div class="form-group user-edit">
+            <label for="FormControlSelect1">Role</label><span class="required">*</span>
+            <select class="form-control" id="FormControlSelect1">
+              <option value="tester">Tester</option>
+              <option value='leader'>Leader</option>
+              <option value='manager'>Manager</option>
+            </select>
+          </div><!-- Dropdown Menu-->
+          
+          <div>
+          <input class="btn btn-primary" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
