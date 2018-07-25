@@ -333,8 +333,165 @@ body{
      border-color: #88828285; 
 }
 
+/**--- Test Case ---*/
+
+.container .query-section{
+    margin: 20px;
+}
+.container .query-content{
+    background-color: #c1bdbd1c;
+    width: 100%;
+    border: 1px solid;
+    border-color: #c1bdbd1c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.container h5{
+    margin: 10px;
+}
+
+.container .query-content select{
+        margin: 10px;
+}
+
+.container .query-content .custom-select{
+        margin: 10px;
+        width:10%;
+}
+
+.container .query-content p{
+    font-size: 14px;
+    color: #928f8cbd;
+}
+
+.container .query-content .submit{
+    border-radius: 4px;
+}
+
+.container .case-section{
+    margin: 0px 20px;
+    background-color: #c1bdbd1c;
+    width: 96.7%;
+    border: 1px solid;
+    border-color: #c1bdbd1c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.container .case-section a{
+    color: #1d2124;
+}
+
+.container .case-section span{
+    float:right;
+    margin: 0px 10px;
+}
+
+.container .case-list-section span{
+    margin: 0px 10px;
+    height: auto;
+}
+
+.container .case-list-section a{
+    color: #1d2124;
+}
+
+.container .case-list-section .list-group-item label{
+    margin: 0px 10px;;
+}
+
+.container .case-list-section .container{
+    overflow: auto;
+}
+
+.container .query-content .main{
+    margin: 10px;
+    border-color: #ff7f0024;
+    background: #ff7f0024;
+}
+
+/**--- Test Case Detail ---*/
+
+.container .title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.container .title-content {
+    background-color: #c1bdbd1c;
+    width: 100%;
+    border: 1px solid;
+    border-color: #c1bdbd1c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.container .title-content input{
+    padding: 5px;
+    margin: 0px 5px 0px 5px;
+}
+.container .title-content .component2{
+    border:solid 1px;
+    border-color: #e4dede;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.container .case-detail-section {
+    margin: 0px;
+    background-color: #c1bdbd1c;
+    width: 100%;
+    border: 1px solid;
+    border-color: #c1bdbd1c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.container .case-detail-list-section textarea{
+    border:solid 1px;
+    border-color:white;
+}
+
+.container .case-detail-list-section .col-4{
+    padding:10px;
+}
+
+.container .case-detail-list-section .col{
+    padding:10px;
+}
+
+.container .case-edit-section{
+    margin: 20px 0px 60px 10px;
+    background-color: #c1bdbd1c;
+    width: 100%;
+}
+
+.container .case-edit-section a{
+    color:black;
+
+}
+
+.container .case-edit-section .title-bar span{
+    float:right;
+    margin:10px;
+}
 
 
+.container .footer-section{
+    margin: 20px 0px 50px 20px;
+    width: 100%;
+    padding: 15px;
+}
+
+.container .footer-section button{
+    float:right;
+    margin: 0px 10px;
+}
+
+#delete .modal-body {
+    text-align: center;
+}
 
 
 

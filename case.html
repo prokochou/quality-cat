@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html id="quality-cat" class="en">
+<head>
+	<title>Quality Cat- Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+	<link rel="stylesheet" href="assets/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <div id="logo"><img src="assets/images/cat-logo-white.svg"></div>
+  <a class="navbar-brand" a href="index.html">Quality Cat</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="plan.html">Test Plan</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="suite.html">Test Suite</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="case.html">Test Case</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="my-task.html">My Task</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.html">Admin</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+<!--  		<li>
+			<span class="login" data-toggle="modal" data-target="#exampleModal">Logged in</span>
+			<span class="line">&nbsp;|&nbsp;</span>
+ 		</li> -->
+ 		<li>
+ 			<span class="contributor" data-toggle="modal" data-target="#contributor">Contributor</span>
+			<span class="line">&nbsp;|&nbsp;</span>
+ 		</li>
+ 		<li>
+ 			<span class="choose-lang"><i class="fa fa-gear"></i> English</span>	
+ 		</li>
+
+    </ul>	
+  </div><!-- collapse navbar-collapse -->
+
+</nav>
+
+<!-- Query part -->
+<div class="container">
+  <section class="query-section">
+    <h5>Query</h5>
+    <div class="query-content">
+        <input type="text" placeholder=" Keyword " value="">
+        <i data-toggle="modal" data-target="#hint" class="far fa-question-circle"></i>
+
+        <select class="selectpicker main">
+          <option value="">AND</option>
+          <option value="">OR</option>
+        </select>
+        
+        Project:
+        <select class="custom-select" multiple size="3">
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+          <option value="A">Project A</option>
+          <option value="B">Project B</option>
+        </select>
+      
+        <select class="selectpicker main">
+          <option value="or">OR</option>
+          <option value="and">AND</option>
+
+        </select>
+
+        Tag:
+        <select class="custom-select" multiple size="3">
+          <option value="tag1">Tag1</option>
+          <option value="tag2">Tag2</option>
+        </select>
+
+        <input class="submit" type="submit" placeholder=" keyword " value="Search" >
+    </div><!-- query content end -->
+  </section>
+
+  <section class="case-section">
+    <div class="title-bar">
+     Cases
+      <span data-toggle="modal" data-target="#delete"><i class="far fa-trash-alt"></i> Delete </span>
+      <span><i class="fas fa-plus"></i><a href="case-add.html"> Add Case </a></span>
+    </div>
+  </section>
+
+  <section class="case-list-section">
+    <div class="container">
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item">          
+        <span class="check-box">
+            <input type="checkbox" id="case-check" name="case-check"
+               value="001">
+            <label for="case-check">001</label>
+        </span>
+
+        <span>
+            <a href="case-detail.html">Open the application</a>
+        </span>
+      </li>
+
+      <li class="list-group-item">          
+        <span class="check-box">
+            <input type="checkbox" id="case-check" name="case-check"
+               value="002">
+            <label for="case-check">002</label>
+        </span>
+
+        <span>
+            Input Test
+        </span>
+      </li>
+    </ul>
+
+    </div><!-- content container end -->
+  </section>
+
+ <!--  <section class="footer-section">
+    <div class="footer">
+      <button type="button" class="btn-outline-info">Save</button>
+      <button type="button" class="Cancel">Success</button>
+      <button type="button" class="btn btn-outline-success">Success</button>
+    </div>
+  </section> -->
+
+
+</div>
+
+<!-- Modal Contributor -->
+<div class="modal fade" id="contributor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<ul>
+      		<li>Proko Chou  <a target="_blank" href="https://www.linkedin.com/in/proko-chou"><i class="fab fa-linkedin"></i></a></li>
+      		<li>Yin Ja  <a target="_blank" href="https://www.linkedin.com/in/yin-ja-079008146/"><i class="fab fa-linkedin"></i></a></li>
+      		<li>Barry Cheng  <a target="_blank" href="https://www.linkedin.com/in/%E5%8D%9A%E5%85%81-%E9%84%AD-1101699b/"><i class="fab fa-linkedin"></i></a></li>
+      		<li>Icon made by Freepik <a target="_blank" href="https://www.flaticon.com"><i class="fas fa-link"></i></a></li>
+      	</ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="delete_case.php" enctype="multipart/form-data">
+          <p>Do you want to delete this case?</p>
+          <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Keyword Hint -->
+<div class="modal fade" id="hint" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>* Multiple keywords searh: </p>
+        <p>1. And : add " , " between each keyword.</p>
+        <p>2. Or : add " ; " between each keyword.</p>
+        <p>e.g., launch and migration or network = 
+         launch,migration;network</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
+
