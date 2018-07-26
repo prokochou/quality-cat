@@ -1,7 +1,8 @@
 
 /*---nav bar ---*/
 .bg-light {
-    background-color: rgba(29, 23, 23, 0.9)!important;
+    /*background-color: rgba(29, 23, 23, 0.9)!important;*/
+    background-color: #284169!important;
 }
 
 
@@ -493,5 +494,25 @@ body{
     text-align: center;
 }
 
+.modal-case-detail form{
+    width:500px;
+}
 
+.modal-case-detail .checkbox-inline{
+    padding:5px;
+    margin:5px;
+}
+/*.modal-case-detail .modal-body div{
+    text-align: center;
+}*/
+
+/*.modal-case-detail .modal-body .btn-primary {
+    float:right;
+    margin-top:2px;
+    margin-right: 20px;
+    color: #9a9696;
+    background-color: #fff;
+    border-color: #FF7F00;
+    display: inline;
+}*/
 
