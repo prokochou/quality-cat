@@ -449,10 +449,16 @@ body{
     padding: 10px;
 }
 
+.case-edit-section .comment{
+    width:10px;
+}
 .container .case-detail-list-section textarea{
     border:solid 1px;
     border-color:white;
 }
+
+
+
 
 .container .case-detail-list-section .col-4{
     padding:10px;
@@ -506,13 +512,14 @@ body{
     text-align: center;
 }*/
 
-/*.modal-case-detail .modal-body .btn-primary {
-    float:right;
+.modal-case-detail .modal-body .btn-primary {
     margin-top:2px;
-    margin-right: 20px;
+    margin-bottom: 10px;
     color: #9a9696;
     background-color: #fff;
     border-color: #FF7F00;
     display: inline;
-}*/
+}
+
+
 

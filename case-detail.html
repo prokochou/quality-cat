@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html id="quality-cat" class="en">
 <head>
@@ -94,29 +93,19 @@
 
   <section class="title-section">
     <div class="title-content">
-        <p>Title: <input class="component1" type="text" id="case-title" value="Migration" readonly>
+        <p>Title: <input class="component1" type="text" id="case-title" value="Migration">
         
-        Project: <input class="component1" type="text" id="case-project" value="Project A" readonly>
-          Tag: <input class="component1" type="text" id="case-tag" value="tag1" readonly>
+        Project: <input class="component1" type="text" id="case-project" value="Project A">
+          Tag: <input class="component1" type="text" id="case-tag" value="tag1">
         </p>
 
         <p>Precondition:</p>
-        <textarea name="case-precondition" class="component2" rows="2" cols="100" id="case-precondition" readonly>更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/</textarea>
+        <textarea name="case-precondition" class="component2" rows="2" cols="100" id="case-precondition">更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/</textarea>
         </p>
 
       
-        <p>Note:</p> <textarea name="case-note" class="component2" rows="1" cols="100" id="case-precondition" readonly>更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/</textarea>
+        <p>Note:</p> <textarea name="case-note" class="component2" rows="1" cols="100" id="case-precondition">更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/更多加盟資訊請連結：http://0917258479.tw.tranews.com/</textarea>
         </p>
-
-        <select class="multiselect" multiple="multiple">
-<option value="cheese">Cheese</option>
-<option value="tomatoes">Tomatoes</option>
-<option value="mozarella">Mozzarella</option>
-<option value="mushrooms">Mushrooms</option>
-<option value="pepperoni">Pepperoni</option>
-<option value="onions">Onions</option>
-</select>
-
 
     </div><!-- title-content end -->
   </section>
@@ -124,8 +113,8 @@
   <section class="case-edit-section">
     <div class="title-bar">
       <span data-toggle="modal" data-target="#delete"><i class="far fa-trash-alt"></i> Delete Steps </span>
-      <span><i class="fas fa-plus"></i> Add Steps </a></span>
-      <span><i class="far fa-edit"></i> Edit </span>
+      <span id="toggle-step"><i class="fas fa-plus"></i> Add Steps </a></span>
+      <!-- <span><i class="far fa-edit"></i> Edit </span> -->
     </div>
   </section>
 
@@ -135,19 +124,19 @@
         <div class="col">
           #
         </div>
-        <div class="col-4">
+        <div class="col-3">
           Step
         </div>
-        <div class="col-4">
+        <div class="col-3">
           Expected Result
         </div>
-        <div class="col">
+<!--         <div class="col">
           Result
         </div>
 
         <div class="col">
           Comment
-        </div>
+        </div> -->
         <div class="col">
           History
         </div>
@@ -159,44 +148,49 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          1
+          <input class="step-id" type="text" value="2" readonly>
         </div>
-        <div class="col-4">
-          <textarea name="step" col="100" rows="1" readonly>Launch</textarea>
+        <div class="col-3">
+          <textarea name="step" col="100" rows="1">Launch</textarea>
         </div>
-        <div class="col-4">
-          <textarea name="step" col="100" rows="1" readonly>Launch</textarea>
+        <div class="col-3">
+          <textarea name="step" col="100" rows="3">Launch App</textarea>
         </div>
-        <div class="col">
+<!--         <div class="col">
           
         </div>
 
         <div class="col">
-          123
-        </div>
+          <textarea class="comment" name="comment" rows="1" col="1">123</textarea>
+        </div> -->
         <div class="col">
-          <span id="001" data-toggle="modal" data-target="#case-more">More <i class="fas fa-eye"></i></span>
+          <span id="001" data-toggle="modal" data-target="#case-more"><i class="fas fa-eye"></i></span>
         </div>
       </div><!-- row end -->
-      
-      <!-- <div class="row">
-        <div class="col-4">
-          1. Launch
-        </div>
-        <div class="col-4">
-          Launch
-        </div>
+
+
+      <div class="row">
         <div class="col">
+          <input class="step-id" type="text" value="1" readonly>
+        </div>
+        <div class="col-3">
+          <textarea name="step" col="100" rows="1">Launch</textarea>
+        </div>
+        <div class="col-3">
+          <textarea name="step" col="100" rows="3">Launch App</textarea>
+        </div>
+<!--         <div class="col">
           
         </div>
 
         <div class="col">
-          123
-        </div>
+          <textarea class="comment" name="comment" rows="1" col="1">123</textarea>
+        </div> -->
         <div class="col">
-          <span id="001" data-toggle="modal" data-target="#case-more">More <i class="fas fa-eye"></i></span>
+          <span id="001" data-toggle="modal" data-target="#case-more"><i class="fas fa-eye"></i></span>
         </div>
-      </div><!-- row end --> -->
+      </div><!-- row end -->
+ 
     </div><!-- container end -->
   </section>
 

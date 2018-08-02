@@ -83,20 +83,7 @@
         </select>
         
         Project:
-        <select class="custom-select" multiple size="3">
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-          <option value="A">Project A</option>
-          <option value="B">Project B</option>
-        </select>
+        <input id="project" data-toggle="modal" data-target="#project1" type="text" placeholder=" Click to select " value="" >
       
         <select class="selectpicker main">
           <option value="or">OR</option>
@@ -105,10 +92,7 @@
         </select>
 
         Tag:
-        <select class="custom-select" multiple size="3">
-          <option value="tag1">Tag1</option>
-          <option value="tag2">Tag2</option>
-        </select>
+        <input id="tag1" data-toggle="modal" data-target="#tag" type="text" placeholder=" Click to select " value="" >
 
         <input class="submit" type="submit" placeholder=" keyword " value="Search" >
     </div><!-- query content end -->
@@ -224,7 +208,67 @@
   </div>
 </div>
 
+<!-- Modal Project -->
+<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-case-detail">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label class="checkbox-inline">
+            <input id="project" type="checkbox" value="Option 1"> Option 1
+          </label>
+          <label class="checkbox-inline">
+            <input id="project" type="checkbox" value="Option 2"> Option 2
+          </label>
+          <label class="checkbox-inline">
+            <input id="project" type="checkbox" value="Option 3"> Option 3
+          </label>
+          <hr>
+          <div>
+            <input class="btn btn-primary" id="save-project" type="submit" value="Save">
+          </div> 
+
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Modal Tag -->
+<div class="modal fade" id="tag" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-case-detail">
+      <div class="modal-header">
+        <button type="button" class="close close-tag" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label class="checkbox-inline">
+            <input id="tag" type="checkbox" value="Tag 1"> Tag 1
+          </label>
+          <label class="checkbox-inline">
+            <input id="tag" type="checkbox" value="Tag 2"> Tag 2
+          </label>
+          <label class="checkbox-inline">
+            <input id="tag" type="checkbox" value="Tag 3"> Tag 3
+          </label>
+          <hr>
+          <div>
+            <input class="btn btn-primary" id="save-tag" type="button" value="ok">
+          </div> 
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/case.js"></script>
 <script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 
 </body>
