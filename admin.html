@@ -289,6 +289,7 @@
           <div class="form-group user-edit">
             <label for="FormControlSelect1">Role</label><span class="required">*</span>
             <select class="form-control" id="FormControlSelect1">
+              <option value="">Please Select</option>
               <option value="tester">Tester</option>
               <option value='leader'>Leader</option>
               <option value='manager'>Manager</option>
@@ -317,18 +318,19 @@
       <div class="modal-body">
         <form>
           <div class="user-add-modal">
-            <label for="user-add">User Name</label><span class="required">*</span>
-            <input id="user-name" type="text" pattern=".{4,10}" title="4 to 10 characters" value="" required>
+            <label for="user-add">Name</label><span class="required">*</span>
+            <input id="user-name" type="text" pattern=".{5,10}" title="4 to 10 characters" value="" required>
           </div>
           
           <div class="user-add-modal">
-            <label>Mail</label><span class="required">*</span>
+            <label>Mail</label><span class="required">*&nbsp&nbsp&nbsp</span>
             <input id="user-mail" type="mail" value="" required>
           </div>  
 
           <div class="form-group user-edit">
             <label for="FormControlSelect1">Role</label><span class="required">*</span>
             <select class="form-control" id="FormControlSelect1">
+              <option value="">Please Select</option>
               <option value="tester">Tester</option>
               <option value='leader'>Leader</option>
               <option value='manager'>Manager</option>

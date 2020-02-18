@@ -243,7 +243,7 @@ body{
 }
 
 .modal-content .modal-body .btn-primary {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 100px;
     color: #9a9696;
     background-color: #fff;
@@ -521,5 +521,12 @@ body{
     display: inline;
 }
 
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-color: #6c757d36;
+}
 
 
