@@ -251,6 +251,8 @@ body{
     display: inline;
 }
 
+
+
 #project-add .modal-content{
     height: 150px;
     width: 100%;
@@ -457,9 +459,6 @@ body{
     border-color:white;
 }
 
-
-
-
 .container .case-detail-list-section .col-4{
     padding:10px;
 }
@@ -529,4 +528,27 @@ button, input, optgroup, select, textarea {
     border-color: #6c757d36;
 }
 
+/**--- Test Plan Main ---*/
+#container_plan .container {
+    padding-top: 75px;
+    margin: 0 auto 15px;
+}
 
+#container_plan .container.container_fluid {
+    width: auto;
+}
+
+
+#container_plan .container .main {
+    float: left;
+    width: 780px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#container_plan {
+    /* width: 500px; */
+    padding: 40px;
+}
+
+/**--- Test Plan Add ---*/
