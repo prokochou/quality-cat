@@ -551,11 +551,16 @@ button, input, optgroup, select, textarea {
     padding: 40px;
 }
 
-#edit {
-    color: red;
+span .search {
+    font-family: "Font Awesome 5 Free";
+    color: #ff7f00;
+
 }
-#edit .fa, .far, .fas {
+span .edit .fa, .far{
     font-family: "Font Awesome 5 Free";
     color: gray;
 }
+
+
+
 /**--- Test Plan Add ---*/
