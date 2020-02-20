@@ -1,4 +1,13 @@
 
+/*---Page ---*/
+#container_item .container .main {
+    float: left;
+    width: 780px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
 /*---nav bar ---*/
 .bg-light {
     /*background-color: rgba(29, 23, 23, 0.9)!important;*/
@@ -118,10 +127,13 @@ body{
 
 /**--- Dashboard ---*/
 
+
+
 #container_dashboard {
-    width: 500px;
+/*    width: 500px;*/
     padding: 40px;
 }
+
 
 #container_dashboard label {
     display: inline-block;
@@ -538,13 +550,6 @@ button, input, optgroup, select, textarea {
     width: auto;
 }
 
-
-#container_plan .container .main {
-    float: left;
-    width: 780px;
-    position: relative;
-    padding-bottom: 50px;
-}
 
 #container_plan {
     /* width: 500px; */
