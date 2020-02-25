@@ -75,8 +75,10 @@
   <div id="container_item" class="main">
     <label><h3>History</h3></label>
     <label>&nbsp&nbsp(Last 10 days)&nbsp&nbsp</label>
-    <span class="search" href="plan-edit.html">&nbsp<i class="fas fa-search fa-lg"></i></span>
+    <span class="search" id="search" data-toggle="modal" data-target="#search1">&nbsp<i class="fas fa-search fa-lg"></i></span>
     <br><br>
+
+<!--     <input id="project" data-toggle="modal" data-target="#project1" type="text" placeholder=" Click to select " value="" > -->
 
     <!-- Dashboard Chart-->
     
@@ -177,6 +179,69 @@
       </div><!-- container end -->
     </div><!-- project-tab end -->
 
+<!-- Modal Project -->
+<div class="modal fade" id="search1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">  
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-case-detail">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body-plan">
+          <label><b><h6>Period:</b></h6></label><br>
+          <label class="filter-tile">From:</label>
+          <input class="form-control" type="date" value="2020-02-25" id="date-input">
+
+          <label class="filter-tile">Until:</label>
+            <input class="form-control" type="date" value="2020-02-29" id="date-input">
+          <br>
+          <label><h6><b>Project:</b></h6></label>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div><!--input group -->
+          <br>
+          <label><h6><b>Keyword (s):</b></h6></label><br>
+            <div class="input-group">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+          <br>
+          <label><h6><b>Planer:</b></h6></label><br>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Choose...</option>
+                <option value="1">Marry</option>
+                <option value="2">Albert</option>
+                <option value="3">Norbert</option>
+              </select>
+            </div><!--input group -->
+          <br>
+          <label><h6><b>Tester:</b></h6></label><br>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Choose...</option>
+                <option value="1">Marry</option>
+                <option value="2">Albert</option>
+                <option value="3">Norbert</option>
+              </select>
+            </div><!--input group -->
+
+          <div>
+            <input class="btn btn-primary" id="searh-plan" type="submit" value="Submit">
+          </div><!-- submit end -->
+          
+      </div>
+    </div>
+  </div>
+</div> 
+
 
 <!-- Modal Contributor -->
 <div class="modal fade" id="contributor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -197,10 +262,10 @@
       </div>
     </div>
   </div>
-</div>
+</div><!-- Modal end -->
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="assets/js/dashboard.js"></script>
+<script type="text/javascript" src="assets/js/plan.js"></script>
 <script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 
 </body>

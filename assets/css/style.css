@@ -563,6 +563,18 @@ span .edit .fa, .far{
     color: gray;
 }
 
+.modal-body-plan{
+    margin: 15px;
+    padding: 0rem;
+}
+
+.filter-tile{
+    color: #988e8e;
+}
+
+#searh-plan{
+    float:right;
+}
 
 
 /**--- Test Plan Add ---*/
