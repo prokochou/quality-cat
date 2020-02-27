@@ -1,7 +1,6 @@
 function returnPlan(){
-	alert(window.location.pathname);
-	url = window.location.pathname;
-	// window.location.pathname = 'quality-cat/plan.html'
+	var url = "/Users/proko/Documents/quality-cat/plan.html";
+	window.location.assign(url);
 }
 
 $(document).ready(function(){
