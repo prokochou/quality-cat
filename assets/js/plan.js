@@ -1,3 +1,9 @@
+function addPlan(){
+	var url = "/Users/proko/Documents/quality-cat/plan-new.html";
+	window.location.assign(url);
+}
+
+
 function returnPlan(){
 	var url = "/Users/proko/Documents/quality-cat/plan.html";
 	window.location.assign(url);
