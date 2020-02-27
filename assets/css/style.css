@@ -577,4 +577,13 @@ span .edit .fa, .far{
 }
 
 
-/**--- Test Plan Add ---*/
+/**--- New Test Plan ---*/
+.plan-new .btn-primary1 {
+    color: #212529;
+    background-color: #fff;
+    border-color: #FF7F00;
+    display: inline;
+    float:right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
