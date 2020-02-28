@@ -1,5 +1,5 @@
 function addPlan(){
-	var url = "/Users/proko/Documents/quality-cat/plan-new.html";
+	var url = "/quality-cat/plan-new.html";
 	window.location.assign(url);
 }
 
