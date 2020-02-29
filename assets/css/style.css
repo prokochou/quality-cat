@@ -382,9 +382,7 @@ body{
 }
 
 .container .case-section{
-    margin: 0px 20px;
     background-color: #c1bdbd1c;
-    width: 96.7%;
     border: 1px solid;
     border-color: #c1bdbd1c;
     border-radius: 4px;
@@ -527,6 +525,7 @@ body{
     background-color: #fff;
     border-color: #FF7F00;
     display: inline;
+    float:right;
 }
 
 button, input, optgroup, select, textarea {
@@ -587,3 +586,25 @@ span .edit .fa, .far{
     margin-top: 20px;
     margin-right: 10px;
 }
+
+/**--- Plan Query ---*/
+p.more {
+    color: #988e8e;
+    margin-bottom: 0;
+}
+
+#case .modal-header {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #716b6b29;
+}
+
+#case .modal-body {
+    margin: 0px;
+    padding: 20px;
+}
+
+#case .modal-footer {
+    border-top: 1px solid #716b6b29;
+}
+
+
