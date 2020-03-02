@@ -607,4 +607,9 @@ p.more {
     border-top: 1px solid #716b6b29;
 }
 
+.plan-select-box input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    margin: 3px 15px;
+}
+
 
