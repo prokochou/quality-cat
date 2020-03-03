@@ -22,6 +22,67 @@ $(document).ready(function(){
 });
 
 // plan-query.html
+
+$(document).ready(function(){
+
+// Slect tag and display in query area
+	$('#save-tag').click(function() {
+
+		var val = [];
+		$(':checkbox:checked').each(function(i){
+          val[i] = $(this).val();
+        });
+        
+        // display in the textarea field
+        document.getElementById('tag-input-field').value = val;
+
+		// Make it unchecked, otherwise the value will display when selecting project area
+		$(':checkbox:checked').each(function(x){
+			$(this).prop('checked', false);
+			});
+
+	});
+
+// Select project and display in qurey area
+	$('#save-project').click(function(){
+
+		var project_select = [];
+		$(':checkbox:checked').each(function(x){
+			project_select[x] = $(this).val();
+			console.log(project_select[x]);
+			});
+		
+		// display in the textarea field
+		document.getElementById('project').value = project_select;
+
+        // Make it unchecked, otherwise the value will display when selecting tag area
+		$(':checkbox:checked').each(function(x){
+			$(this).prop('checked', false);
+			});	
+		
+	});
+});
+
+
+// Select project and display in qurey area
+// $(document).ready(function(){
+// 	$('#save-project').click(function(){
+// 		var project_select = [];
+
+// 		$(':checkbox:checked').each(function(x){
+// 			project_select[x] = $(this).val();
+// 			console.log(project_select[x]);
+// 		});
+
+// 		console.log(project_select);
+// 		document.getElementById('project').value = project_select;
+// 	});
+
+
+// });
+
+
+// plan-query.html
 // Hover on the tag area to show more
 // $(document).ready(function(){
 //     $( "#tag-hover" ).hover(function() {
@@ -29,4 +90,4 @@ $(document).ready(function(){
 //         show: true
 //     });
 //   });  
-});
+// });

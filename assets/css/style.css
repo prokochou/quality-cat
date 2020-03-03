@@ -612,4 +612,10 @@ p.more {
     margin: 3px 15px;
 }
 
+.btn-save-tag {
+    float: right;
+    border: solid 1px orange;
+    margin: 1px 15px 10px;
+}
+
 
