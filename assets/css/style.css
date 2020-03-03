@@ -1,3 +1,11 @@
+.btn-outline-warning {
+    color: #1b1a19;
+    background-color: transparent;
+    background-image: none;
+    border-color: #FF7F00;
+    margin:10px;
+}
+
 
 /*---Page ---*/
 #container_item .container .main {
@@ -536,6 +544,7 @@ button, input, optgroup, select, textarea {
     border-color: #6c757d36;
 }
 
+
 /**--- Test Plan Main ---*/
 #container_plan .container {
     padding-top: 75px;
@@ -618,4 +627,14 @@ p.more {
     margin: 1px 15px 10px;
 }
 
+
+/*
+div.plan-overflow {
+    overflow: auto;
+}
+*/
+#myTabContent .container .fa, .fas {
+    font-weight: 900;
+    color: #FF7F00;
+}
 

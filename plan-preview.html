@@ -73,7 +73,15 @@
 <!-- Main Content -->
 <div id="container_plan" class="container container_fluid">
   <div id="container_item" class="main">
-    <label><h3>New Test Plan</h3></label><br><br>
+
+    <div class="form-group row">
+      <div class="col-sm-12 plan-new">
+        <button type="submit" value="submit" class="btn btn-primary1">Submit</button>
+        <button type="button" value="cancel" class="btn btn-primary1" onClick="returnPlan()">Cancel</button>
+      </div>
+    </div>
+
+    <label><h3>Plan Preview</h3></label><br><br>
 
     <form>
       <div class="form-group row">
@@ -86,71 +94,30 @@
       <div class="form-group row">
         <label for="plan-planer" class="col-sm-2 col-form-label">Planner</label>
         <div class="col-sm-10">
-          <select class="custom-select" id="plan-planer" required>
-            <option selected>Please Select<option>
-            <option value="1">Marry</option>
-            <option value="2">Albert</option>
-            <option value="3">Norbert</option>
-          </select>
+            <input type="text" class="form-control" id="plan-planner" value="" required>
         </div><!-- col -->
       </div><!-- form-group now -->
 
       <div class="form-group row">
         <label for="plan-project" class="col-sm-2 col-form-label">Project</label>
         <div class="col-sm-10">
-          <select class="custom-select" id="plan-project" required>
-            <option selected>Please Select</option>
-            <option value="1">Apple</option>
-            <option value="2">Melon</option>
-            <option value="3">Orange</option>
-          </select>
+          <input type="text" class="form-control" id="plan-project" value="" required>
         </div><!-- col -->
       </div><!-- form-group row -->
 
       <div class="form-group row">
         <label for="plan-id" class="col-sm-2 col-form-label">Version</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="plan-id" required>
+          <input type="text" class="form-control" id="plan-version" value="" required>
         </div><!-- col -->
       </div><!-- form-group row -->
 
       <div class="form-group row">
-        <label for="plan-purpose" class="col-sm-2 col-form-label">Test Purpose</label>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="new-feature">
-          <label class="form-check-label" for="plan-purpose">New Feature</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="regression">
-          <label class="form-check-label" for="plan-purpose">Regression</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="function">
-          <label class="form-check-label" for="plan-purpose">Function</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="integration">
-          <label class="form-check-label" for="plan-purpose">Integration</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="performance">
-          <label class="form-check-label" for="plan-purpose">Performance</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose" value="power">
-          <label class="form-check-label" for="plan-purpose">Power</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="plan-purpose-others" value="others">
-          <!-- <button>Others</button> -->
-          <label class="form-check-label" for="plan-purpose-others">Others</label>
-        </div>
-      </div><!-- form-group -->
+        <label for="plan-id" class="col-sm-2 col-form-label">Test Purpose</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="plan-purpose" value="" required>
+        </div><!-- col -->
+      </div><!-- form-group row -->
 
       <div class="form-group row" id="plan-purpose-others-input" style="display:none">
         <label for="plan-purpose-others" class="col-sm-2 col-form-label plan-purpose-others">Other Purpose</label>
@@ -164,17 +131,136 @@
         <textarea class="form-control" id="whats-new" rows="5"></textarea required>
       </div>
 
-      <div class="form-group row">
-        <div class="col-sm-12 plan-new">
-          <button type="submit" value="submit" class="btn btn-primary1">Next</button>
-          <button type="button" value="cancel" class="btn btn-primary1" onClick="returnPlan()">Cancel</button>
-        </div>
-      </div>
+<!-- Case Content Table -->
+
+  <section class="case-section">
+    <div class="title-bar">
+      <b>Test Case(s)</b>
+      <i class="fas fa-paw"></i>
+      <span data-toggle="modal" data-target="#delete">
+        <i class="far fa-trash-alt"></i>&nbspDelete selected case(s)
+      </span>
+
+    </div><!-- title-bar end -->
+  </section>
+
+  <div>
+    <form>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Select</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Project</th>
+            <th scope="col">Tag</th>
+            <th scope="col">Last 3 Times</th>
+            <th scope="col">Test History</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12345</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Open the application</span> 
+            </td>
+            <td>Mango</td>
+            <td>NA</td>
+            <td>
+              2019-12-21<br>
+              2019-12-30<br>
+              2020-01-30
+            </td>
+            <td>      
+              <a href="www.google.com"><span class="edit">&nbsp<i class="fas fa-paw"></i></span></a>
+            </td>            
+          </tr>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12344</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Input Test</span>
+            </td>
+            <td>Orange</td>
+            <td class="tag" id="tag-hover" data-toggle="modal" data-target="#case">
+              new-feature<br>
+              regression<br>
+              automation<br>
+              <p class="more">more...</p>       
+            </td>
+            <td>NA</td>
+            <td>
+              <a href="www.google.com"><span class="edit">&nbsp<i class="fas fa-paw"></i></span></a>
+            </td> 
+          </tr>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12343</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Launch App 100 times</span>
+            </td>
+            <td>Apple</td>
+            <td class="tag" id="tag-hover" data-toggle="modal" data-target="#case">
+              automation<br>
+              power<br>
+              regression
+              <p class="more">more...</p>  
+            </td>
+            <td>
+              2020-02-29
+            </td>
+            <td>
+                <a href="www.google.com"><span class="edit">&nbsp<i class="fas fa-paw"></i></span></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </form>
+
+  </div><!-- Content Tabel end-->
+
+
+
+    </form>
+
 
 </div><!-- container -->
 
- 
+<!-- Modal for delete cases -->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="delete_case.php" enctype="multipart/form-data">
+          <p>Do you want to delete the case (s)?</p>
+          <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
 
 
 
