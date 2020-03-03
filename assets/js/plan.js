@@ -5,6 +5,19 @@ function addPlan(){
 }
 
 // plan-new.html
+function savePlan1(){
+	// TODO: add check required column
+	var url = "/quality-cat/plan-query.html";
+	window.location.assign(url);	
+}
+
+// plan-query.html
+function savePlan2(){
+	var url_preview = "/quality-cat/plan-preview.html";
+	window.location.assign(url_preview);	
+}
+
+// plan-new.html
 function returnPlan(){
 	var url = "/quality-cat/plan.html";
 	window.location.assign(url);
