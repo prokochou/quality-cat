@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html id="quality-cat" class="en">
+<head>
+  <title>Quality Cat- Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <link rel="stylesheet" href="assets/lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<!-- Top bar--> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <div id="logo"><img src="assets/images/cat-logo-white.svg"></div>
+  <a class="navbar-brand" a href="index.html">Quality Cat</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="plan.html">Test Plan</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="suite.html">Test Suite</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="case.html">Test Case</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="my-task.html">My Task</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.html">Admin</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li>
+      <span class="logout" data-toggle="modal" data-target="#exampleModal">Logged Out</span>
+      <span class="line">&nbsp;|&nbsp;</span>
+    </li>
+
+    <li>
+      <span class="contributor" data-toggle="modal" data-target="#contributor">Contributor</span>
+      <span class="line">&nbsp;|&nbsp;</span>
+    </li>
+    
+    <li>
+      <span class="choose-lang"><i class="fa fa-gear"></i> English</span> 
+    </li>
+
+    </ul> 
+  </div><!-- collapse navbar-collapse -->
+
+</nav>
+
+<!-- Main Content -->
+<div id="container_plan" class="container container_fluid">
+  <div id="container_item" class="main">
+
+    <div class="form-group row">
+      <div class="col-sm-12 plan-new">
+        <button type="submit" value="submit" class="btn btn-primary1">Submit</button>
+        <button type="button" value="cancel" class="btn btn-primary1" onClick="returnPlan()">Cancel</button>
+      </div>
+    </div>
+
+    <label><h3>Preview & Assign</h3></label><br><br>
+
+    <form>
+      <div class="form-group row">
+        <label for="plan-id" class="col-sm-2 col-form-label">ID</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="plan-id" disabled>
+        </div><!-- col -->
+      </div><!-- form-group now -->
+
+      <div class="form-group row">
+        <label for="plan-planer" class="col-sm-2 col-form-label">Planner</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="plan-planner" value="" required>
+        </div><!-- col -->
+      </div><!-- form-group now -->
+
+      <div class="form-group row">
+        <label for="plan-project" class="col-sm-2 col-form-label">Project</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="plan-project" value="" required>
+        </div><!-- col -->
+      </div><!-- form-group row -->
+
+      <div class="form-group row">
+        <label for="plan-id" class="col-sm-2 col-form-label">Version</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="plan-version" value="" required>
+        </div><!-- col -->
+      </div><!-- form-group row -->
+
+      <div class="form-group row">
+        <label for="plan-id" class="col-sm-2 col-form-label">Test Purpose</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="plan-purpose" value="" required>
+        </div><!-- col -->
+      </div><!-- form-group row -->
+
+      <div class="form-group row" id="plan-purpose-others-input" style="display:none">
+        <label for="plan-purpose-others" class="col-sm-2 col-form-label plan-purpose-others">Other Purpose</label>
+        <div class="col-sm-10" >
+          <input type="text" class="form-control" id="plan-purpose-others-input" placeholder="Split Purpose by Comma.  e.g.stree 100 times, automation">
+        </div><!-- col -->
+      </div><!-- form-group row -->
+
+      <div class="form-group">
+        <label for="whats-new">What's New</label>
+        <textarea class="form-control" id="whats-new" rows="5"></textarea required>
+      </div>
+
+<!-- Case Content Table -->
+
+  <section class="case-section">
+    <div class="title-bar">
+      <b>Test Case(s)</b>
+
+      <span data-toggle="modal" data-target="#delete">
+        <i class="far fa-trash-alt"></i>&nbspDelete selected case(s)
+      </span>
+
+      <span data-toggle="modal" data-target="#delete">
+        <i class="fas fa-anchor"></i>&nbspAssign testers for selected case(s)
+      </span>
+
+    </div><!-- title-bar end -->
+  </section>
+
+  <div>
+    
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">
+              Select all<br>
+              <input type="checkbox" id="plan-select-box" name="select-all-case" value="all_cases">
+            </th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Project</th>
+            <th scope="col">Tag</th>
+            <th scope="col">Assignee</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12345</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Open the application</span> 
+            </td>
+            <td>Mango</td>
+            <td>NA</td>
+            <td>
+              NA
+            </td>     
+          </tr>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12344</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Input Test</span>
+            </td>
+            <td>Orange</td>
+            <td class="tag" id="tag-hover" data-toggle="modal" data-target="#case">
+              new-feature<br>
+              regression<br>
+              automation<br>
+              <p class="more">more...</p>       
+            </td>
+            <td>Oliver</td>
+          </tr>
+          <tr>
+            <th>
+              <span class="plan-select-box">
+                <input type="checkbox" id="plan-select-box" name="plan-select-box"
+                 value="caseID">
+              </span>
+            </th>
+            <td>12343</td>
+            <td>
+              <span class="search" id="search" data-toggle="modal" data-target="#case">Launch App 100 times</span>
+            </td>
+            <td>Apple</td>
+            <td class="tag" id="tag-hover" data-toggle="modal" data-target="#case">
+              automation<br>
+              power<br>
+              regression
+              <p class="more">more...</p>  
+            </td>
+            <td>
+              Olivia
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div><!-- Content Tabel end-->
+</div><!-- container -->
+
+<!-- Modal for delete cases -->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form method="post" action="delete_case.php" enctype="multipart/form-data">
+          <p>Do you want to delete the case (s)?</p>
+          <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </form>
+      </div><!-- delete -->
+
+    </div>
+  </div>
+</div> 
+
+<!-- Modal Tag More -->
+<div class="modal fade" id="case" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="case modal-header">
+        <h5 class="modal-title">Tag<br></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="case modal-body">
+        new-feature<br>
+        regression<br>
+        automation<br>
+        stress<br>
+        performance<br>        
+      </div>
+      <div class="case modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div><!-- modal-footer -->
+    </div><!-- modal-content -->
+  </div>
+</div><!-- modal more -->
+
+
+
+<!-- Modal Contributor -->
+<div class="modal fade" id="contributor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>          
+          <li>Proko Chou  <a target="_blank" href="https://www.linkedin.com/in/proko-chou"><i class="fab fa-linkedin"></i></a></li>
+          <li>Yin Ja  <a target="_blank" href="https://www.linkedin.com/in/yin-ja-079008146/"><i class="fab fa-linkedin"></i></a></li>
+          <li>Barry Cheng  <a target="_blank" href="https://www.linkedin.com/in/%E5%8D%9A%E5%85%81-%E9%84%AD-1101699b/"><i class="fab fa-linkedin"></i></a></li>
+          <li>Icon made by Freepik <a target="_blank" href="https://www.flaticon.com"><i class="fas fa-link"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- Modal end -->
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/plan.js"></script>
+<script src="assets/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
+

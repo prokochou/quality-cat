@@ -13,7 +13,7 @@ function savePlan1(){
 
 // plan-query.html
 function savePlan2(){
-	var url = "/quality-cat/plan-preview.html";
+	var url = "/quality-cat/plan-assign.html";
 	window.location.assign(url);
 }
 
