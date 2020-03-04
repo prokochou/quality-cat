@@ -13,8 +13,8 @@ function savePlan1(){
 
 // plan-query.html
 function savePlan2(){
-	var url_preview = "/quality-cat/plan-preview.html";
-	window.location.assign(url_preview);	
+	var url = "/quality-cat/plan-preview.html";
+	window.location.assign(url);
 }
 
 // plan-new.html
