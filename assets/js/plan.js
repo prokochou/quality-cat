@@ -52,7 +52,6 @@ $('#save-tag').click(function() {
 	$(':checkbox:checked').each(function(x){
 		$(this).prop('checked', false);
 		});
-
 });
 
 // Select project and display in qurey area
@@ -70,8 +69,42 @@ $('#save-project').click(function(){
     // Make it unchecked, otherwise the value will display when selecting tag area
 	$(':checkbox:checked').each(function(x){
 		$(this).prop('checked', false);
-		});	
-	
+		});		
+});
+
+$('#save-assign').click(function() {
+
+	// Get selected test cases
+	var selected = [];
+	var tester_ls = [];
+	$(':checkbox:checked').each(function(y){
+		pattern = /^[A-Za-z]+$/;
+		if ($(this).val().match(pattern)) {
+			tester_ls.push($(this).val());
+		}
+		else{
+			selected.push($(this).val());
+		}		
+	});
+
+	// Create ID list
+	var id_ls =[];
+	var z;
+	for (i = 0; i < selected.length; i++){
+		td_id = 'assign-input-field-' + selected[i] 
+		id_ls.push(td_id);
+	}
+
+	// display in the textarea field
+	var tester;
+	for (tester = 0; tester < id_ls.length; tester++){
+		document.getElementById(id_ls[tester]).innerText  = tester_ls;
+	}
+    	
+	// Make it unchecked, otherwise the value will display when selecting project area
+	$(':checkbox:checked').each(function(x){
+		$(this).prop('checked', false);
+	});
 });
 
 
